@@ -1,5 +1,5 @@
 <?php
-namespace Automattic\WooCommerce\Blocks\BlockTypes;
+namespace Automattic\PooCommerce\Blocks\BlockTypes;
 
 /**
  * ProductFilters class.
@@ -54,7 +54,7 @@ class ProductFilters extends AbstractBlock {
 		 *
 		 * @since 9.7.0
 		 */
-		$active_filters = apply_filters( 'woocommerce_blocks_product_filters_selected_items', array(), $filter_params );
+		$active_filters = apply_filters( 'poocommerce_blocks_product_filters_selected_items', array(), $filter_params );
 
 		usort(
 			$active_filters,
@@ -116,7 +116,7 @@ class ProductFilters extends AbstractBlock {
 					<?php echo $this->get_svg_icon( $attributes['overlayIcon'] ?? 'filter-icon-2' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				<?php endif; ?>
 				<?php if ( 'icon-only' !== $attributes['overlayButtonType'] ) : ?>
-					<span><?php echo esc_html__( 'Filter products', 'woocommerce' ); ?></span>
+					<span><?php echo esc_html__( 'Filter products', 'poocommerce' ); ?></span>
 				<?php endif; ?>
 			</button>
 			<div class="wc-block-product-filters__overlay">
@@ -130,7 +130,7 @@ class ProductFilters extends AbstractBlock {
 								class="wc-block-product-filters__close-overlay"
 								data-wc-on--click="actions.closeOverlay"
 							>
-								<span><?php echo esc_html__( 'Close', 'woocommerce' ); ?></span>
+								<span><?php echo esc_html__( 'Close', 'poocommerce' ); ?></span>
 								<?php echo $this->get_svg_icon( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 							</button>
 						</header>
@@ -145,7 +145,7 @@ class ProductFilters extends AbstractBlock {
 								data-wc-interactive="<?php echo esc_attr( wp_json_encode( array( 'namespace' => $this->get_full_block_name() ), JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP ) ); ?>"
 								data-wc-on--click="actions.closeOverlay"
 							>
-								<span><?php echo esc_html__( 'Apply', 'woocommerce' ); ?></span>
+								<span><?php echo esc_html__( 'Apply', 'poocommerce' ); ?></span>
 							</button>
 						</footer>
 					</div>
@@ -224,7 +224,7 @@ class ProductFilters extends AbstractBlock {
 		 *
 		 * @return array Active filters params.
 		 */
-		$filter_param_keys = array_unique( apply_filters( 'woocommerce_blocks_product_filters_param_keys', array(), array_keys( $url_query_params ) ) );
+		$filter_param_keys = array_unique( apply_filters( 'poocommerce_blocks_product_filters_param_keys', array(), array_keys( $url_query_params ) ) );
 
 		return array_filter(
 			$url_query_params,

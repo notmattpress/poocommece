@@ -74,7 +74,7 @@ export const toggleProductFilterClearButtonVisibilityFactory = () => {
 					parentBlockId: clearButtonParentBlockId,
 				} = previousClearButtonBlockPosition;
 				insertBlock(
-					createBlock( 'woocommerce/product-filter-clear-button' ),
+					createBlock( 'poocommerce/product-filter-clear-button' ),
 					clearButtonBlockPosition,
 					clearButtonParentBlockId,
 					false
@@ -98,7 +98,7 @@ export const toggleProductFilterClearButtonVisibilityFactory = () => {
 				return false;
 			}
 			insertBlock(
-				createBlock( 'woocommerce/product-filter-clear-button' ),
+				createBlock( 'poocommerce/product-filter-clear-button' ),
 				positionIndexToInsertBlock,
 				parentClientIdToInsertBlock,
 				false
@@ -126,7 +126,7 @@ export const toggleProductFilterClearButtonVisibilityFactory = () => {
 				filterBlockHeader.innerBlocks.length;
 			if ( Boolean( filterBlockHeading ) ) {
 				insertBlock(
-					createBlock( 'woocommerce/product-filter-clear-button' ),
+					createBlock( 'poocommerce/product-filter-clear-button' ),
 					lastFilterBlockHeaderPosition,
 					filterBlockHeader?.clientId,
 					false
@@ -140,7 +140,7 @@ export const toggleProductFilterClearButtonVisibilityFactory = () => {
 
 		function insertClearButtonToTheFirstPosition() {
 			insertBlock(
-				createBlock( 'woocommerce/product-filter-clear-button' ),
+				createBlock( 'poocommerce/product-filter-clear-button' ),
 				0,
 				clientId,
 				false

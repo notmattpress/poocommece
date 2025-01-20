@@ -2,11 +2,11 @@
  * External dependencies
  */
 import { useSelect, useDispatch } from '@wordpress/data';
-import { PAYMENT_STORE_KEY, storeNoticesStore } from '@woocommerce/block-data';
-import { getNoticeContexts } from '@woocommerce/base-utils';
+import { PAYMENT_STORE_KEY, storeNoticesStore } from '@poocommerce/block-data';
+import { getNoticeContexts } from '@poocommerce/base-utils';
 import type { Notice } from '@wordpress/notices';
 import { useMemo, useEffect } from '@wordpress/element';
-import type { NoticeType } from '@woocommerce/types';
+import type { NoticeType } from '@poocommerce/types';
 
 /**
  * Internal dependencies

@@ -4,10 +4,10 @@
 import { useState } from '@wordpress/element';
 import { useDispatch, useSelect } from '@wordpress/data';
 import { Button } from '@wordpress/components';
-import { Pill } from '@woocommerce/components';
+import { Pill } from '@poocommerce/components';
 import { __ } from '@wordpress/i18n';
-import { recordEvent } from '@woocommerce/tracks';
-import { PLUGINS_STORE_NAME, type PluginSelectors } from '@woocommerce/data';
+import { recordEvent } from '@poocommerce/tracks';
+import { PLUGINS_STORE_NAME, type PluginSelectors } from '@poocommerce/data';
 
 /**
  * Internal dependencies
@@ -98,7 +98,7 @@ export const SmartPluginCardBody = ( {
 					disabled={ buttonDisabled }
 					onClick={ installAndActivate }
 				>
-					{ __( 'Activate', 'woocommerce' ) }
+					{ __( 'Activate', 'poocommerce' ) }
 				</Button>
 			);
 		}
@@ -111,7 +111,7 @@ export const SmartPluginCardBody = ( {
 					disabled={ buttonDisabled }
 					onClick={ installAndActivate }
 				>
-					{ __( 'Install extension', 'woocommerce' ) }
+					{ __( 'Install extension', 'poocommerce' ) }
 				</Button>
 			);
 		}
@@ -128,7 +128,7 @@ export const SmartPluginCardBody = ( {
 					} );
 				} }
 			>
-				{ __( 'View details', 'woocommerce' ) }
+				{ __( 'View details', 'poocommerce' ) }
 			</Button>
 		);
 	};
